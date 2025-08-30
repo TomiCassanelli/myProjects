@@ -1,0 +1,139 @@
+<!doctype html>
+<html lang="es">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>TP1</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+
+<body>
+  <header class="header-bar">
+    <div class="container">
+      <strong>CV</strong>
+      <nav class="nav" aria-label="Secciones">
+        <a href="#about">Sobre mí</a>
+        <a href="#skills">Habilidades y Aptitudes</a>
+        <a href="#experience">Experiencia</a>
+        <a href="#education">Educación</a>
+        <a href="#contact">Contacto</a>
+      </nav>
+    </div>
+  </header>
+
+  <section class="intro">
+    <div class="container">
+      <img class="avatar" alt="Foto de perfil" src="image.png" />
+      <h1><span data-field="name">Tomás Cassanelli</span></h1>
+      <p class="muted">
+        <span data-field="role">Estudiante de Ingeniería en Sistemas</span>
+        -
+        <span data-field="address">Córdoba, Argentina</span>
+      </p>
+    </div>
+  </section>
+
+  <main class="container">
+    <section class="grid-2">
+      <aside class="card">
+        <h2>Sobre mí</h2>
+        <p>
+          Soy una persona proactiva, responsable y organizada. Me interesa especialmente el desarrollo frontend
+          (maquetado y diseño) y también el análisis de datos, la IA y la nube. Aunque tengo menos experiencia en
+          backend, estoy abierto a aprender y crecer en ese camino.
+        </p>
+      </aside>
+
+      <aside class="card">
+        <h2>Información básica</h2>
+        <dl class="info-grid">
+          <dt>Edad</dt>
+          <dd data-field="age">23</dd>
+          <dt>Email</dt>
+          <dd><a id="emailLink" href="mailto:tomascassanelli02@gmail.com"><span
+                data-field="email">tomascassanelli02@gmail.com</span></a></dd>
+          <dt>LinkedIn</dt>
+          <dd><a href="http://www.linkedin.com/in/tomás-cassanelli-22256026b" target="_blank" rel="noopener">Tomás
+              Cassanelli</a></dd>
+          <dt>Teléfono</dt>
+          <dd data-field="phone">+54 9 351 200 9960</dd>
+          <dt>Idiomas</dt>
+          <dd data-field="languages">Español (nativo), Inglés (intermedio)</dd>
+        </dl>
+      </aside>
+    </section>
+
+    <section id="skills" class="card">
+      <h2>Habilidades y Aptitudes</h2>
+      <article>
+        <h3>Habilidades</h3>
+        <ul class="tags">
+          <li>C++</li>
+          <li>SQL</li>
+          <li>ReactJS</li>
+          <li>Git</li>
+          <li>Go</li>
+          <li>Azure (Cloud)</li>
+        </ul>
+      </article>
+      <article>
+        <h3>Aptitudes</h3>
+        <ul class="tags">
+          <li>Inglés Intermedio</li>
+          <li>Trabajo en Equipo</li>
+          <li>Proactividad</li>
+          <li>Organización</li>
+          <li>Responsabilidad</li>
+        </ul>
+      </article>
+    </section>
+
+    <section id="experience" class="card">
+      <h2>Experiencia</h2>
+      <ul>
+        <li><strong>Tutorías de Alumnos - UCC (Mar 2023 - Dic 2023):</strong> apoyo académico en matemáticas y
+          programación.</li>
+        <li><strong>Coordinador de Proyecto en Equipo - Tech Camp UCC (Ago 2022):</strong> liderazgo de equipo y
+          cumplimiento de actividades; propuesta ganadora.</li>
+      </ul>
+    </section>
+    <section id="education" class="card">
+      <h2>Educación</h2>
+      <ul>
+        <li><strong>Ingeniería en Sistemas - Universidad Católica de Córdoba (2021 - Presente):</strong> Promedio
+          8.64/10.</li>
+        <li><strong>Bachiller en Administración de Empresas - Colegio C.E.F. San Buenaventura (2015 - 2020):</strong>
+          Promedio 9.11/10.</li>
+      </ul>
+    </section>
+
+    <section id="contact" class="card">
+      <h2>Contacto</h2>
+      <p class="muted">Dejá tus datos y a la brevedad te escribo.</p>
+      <form class="form">
+        <div>
+          <label>Tu nombre</label>
+          <input name="name" type="text" placeholder="Nombre Apellido" required />
+        </div>
+        <div>
+          <label>Tu email</label>
+          <input name="email" type="email" placeholder="ejemplo@mail.com" required />
+        </div>
+        <div>
+          <label>Mensaje</label>
+          <textarea name="message" placeholder="Contame brevemente en qué puedo ayudarte" required></textarea>
+        </div>
+        <div>
+          <button type="submit" class="btn">Enviar mensaje</button>
+        </div>
+      </form>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container">UCC - Taller de Desarrollo Frontend</div>
+  </footer>
+</body>
+
+</html>
