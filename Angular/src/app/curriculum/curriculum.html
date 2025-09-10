@@ -1,0 +1,93 @@
+<header class="header-bar">
+    <div class="container">
+        <strong>CV</strong>
+        <nav class="nav" aria-label="Secciones">
+            <a routerLink="/form">Contacto</a>
+        </nav>
+    </div>
+</header>
+
+<section class="intro">
+    <div class="container">
+        <img class="avatar" alt="Foto de perfil" src="/yo.png" />
+        <h1><span data-field="name">Tomás Cassanelli</span></h1>
+        <p class="muted">
+            <span data-field="role">Estudiante de Ingeniería en Sistemas</span>
+            -
+            <span data-field="address">Córdoba, Argentina</span>
+        </p>
+    </div>
+</section>
+
+<main class="container">
+    <section class="grid-2">
+        <aside class="card">
+            <h2>Sobre mí</h2>
+            <p>
+                Soy una persona proactiva, responsable y organizada. Me interesa especialmente el desarrollo
+                frontend
+                (maquetado y diseño) y también el análisis de datos, la IA y la nube. Aunque tengo menos experiencia
+                en
+                backend, estoy abierto a aprender y crecer en ese camino.
+            </p>
+        </aside>
+
+        <aside class="card">
+            <h2>Información básica</h2>
+            <dl class="info-grid">
+                <dt>Edad</dt>
+                <dd data-field="age">23</dd>
+                <dt>Email</dt>
+                <dd><a id="emailLink" href="mailto:tomascassanelli02@gmail.com"><span
+                            data-field="email">tomascassanelli02@gmail.com</span></a></dd>
+                <dt>LinkedIn</dt>
+                <dd><a href="http://www.linkedin.com/in/tomás-cassanelli-22256026b" target="_blank" rel="noopener">Tomás
+                        Cassanelli</a></dd>
+                <dt>Teléfono</dt>
+                <dd data-field="phone">+54 9 351 200 9960</dd>
+                <dt>Idiomas</dt>
+                <dd data-field="languages">Español (nativo), Inglés (intermedio)</dd>
+            </dl>
+        </aside>
+    </section>
+
+    <section id="skills" class="card">
+
+        <h2>Habilidades y Aptitudes</h2>
+        <article>
+            <h3>Habilidades</h3>
+            <ul class="tags">
+                <li *ngFor="let hab of habilidades">{{ hab }}</li>
+            </ul>
+        </article>
+        <article>
+            <h3>Aptitudes</h3>
+            <ul class="tags">
+                <li *ngFor="let apt of aptitudes">{{ apt }}</li>
+            </ul>
+        </article>
+    </section>
+
+    <section id="experience" class="card">
+        <h2>Experiencia</h2>
+        <ul>
+            <li *ngFor="let exp of experiencias">
+                <strong>{{ exp.titulo }} ({{ exp.fecha }}):</strong> {{ exp.descripcion }}
+            </li>
+        </ul>
+    </section>
+    <section id="education" class="card">
+        <h2>Educación</h2>
+        <ul>
+            <li *ngFor="let edu of educacion">
+                <strong>{{ edu.titulo }} - ({{ edu.institucion }}):</strong> ({{edu.anioDesde}} - {{edu.anioHasta}}): Promedio
+                {{
+                edu.promedio }}/10
+            </li>
+        </ul>
+    </section>
+</main>
+
+<footer class="footer">
+    <div class="container">UCC - Taller de Desarrollo Frontend</div>
+</footer>

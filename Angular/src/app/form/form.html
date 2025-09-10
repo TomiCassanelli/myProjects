@@ -1,0 +1,49 @@
+<header class="header-bar">
+    <div class="container">
+        <strong>Form</strong>
+        <nav class="nav" aria-label="Secciones">
+            <a routerLink="/curriculum">Curriculum</a>
+        </nav>
+    </div>
+</header>
+
+<section class="intro">
+    <div class="container">
+        <img class="avatar" alt="Foto de perfil" src="/yo.png" />
+        <h1><span data-field="name">Tomás Cassanelli</span></h1>
+        <p class="muted">
+            <span data-field="role">Estudiante de Ingeniería en Sistemas</span>
+            -
+            <span data-field="address">Córdoba, Argentina</span>
+        </p>
+    </div>
+</section>
+
+<main class="container">
+
+    <section id="contact" class="card">
+        <h2>Contacto</h2>
+        <p class="muted">Dejá tus datos y a la brevedad te escribo.</p>
+        <form class="form" [formGroup]="form" (ngSubmit)="onSubmit()" novalidate>
+            <div>
+                <label>Tu nombre</label>
+                <input formControlName="name" name="name" type="text" placeholder="Nombre Apellido" />
+            </div>
+            <div>
+                <label>Tu email</label>
+                <input formControlName="email" name="email" type="email" placeholder="ejemplo@mail.com" />
+            </div>
+            <div>
+                <label>Mensaje</label>
+                <textarea formControlName="message" name="message" placeholder="Contame brevemente en qué puedo ayudarte"></textarea>
+            </div>
+            <div>
+                <button type="submit" class="btn" [disabled]="form.invalid">Enviar mensaje</button>
+            </div>
+        </form>
+    </section>
+</main>
+
+<footer class="footer">
+    <div class="container">UCC - Taller de Desarrollo Frontend</div>
+</footer>

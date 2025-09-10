@@ -1,0 +1,106 @@
+* {
+  box-sizing: border-box;
+}
+
+h1,
+h2,
+h3,
+p {
+  margin-top: 0; /* quita espacio de arriba */
+  margin-bottom: 8px; /* deja un poquito abajo */
+}
+
+body {
+  font-family: Roboto, Arial;
+  color: #222;
+  line-height: 1.5;
+}
+
+a {
+  color: #0a66c2;
+}
+
+.container {
+  max-width: 1000px;
+  margin: auto;
+}
+
+/* Seccion de header y informacion basica */
+.header-bar .container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 12px;
+}
+
+.intro .container {
+  display: grid;
+  place-items: center;
+  text-align: center;
+}
+
+main.container {
+  display: grid;
+  gap: 16px;
+}
+
+.nav {
+  display: flex;
+  gap: 12px;
+}
+
+.intro {
+  background: url("/fondo.png") center/cover no-repeat, #f5f5f7;
+  padding: 12px;
+  margin-bottom: 16px;
+}
+
+.avatar {
+  width: 256px;
+  height: 256px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid #ddd;
+}
+
+/* Seccion de formulario */
+.form {
+  width: 100%;
+  display: grid;
+  gap: 12px;
+}
+
+label {
+  font-weight: 600;
+}
+
+input,
+select,
+textarea {
+  width: 100%;
+  padding: 8px 10px;
+  border-radius: 8px;
+  border: 1px solid #ddd;
+  color: #222;
+}
+
+.btn {
+  /* display: inline-block; */
+  padding: 8px 12px;
+  border-radius: 8px;
+  background: #0a66c2;
+  color: #fff;
+  cursor: pointer;
+}
+
+.btn:is(:hover, :focus-visible) {
+  filter: brightness(0.8);
+}
+
+/* Seccion de footer */
+.footer {
+  background: url("/fondo.png") center/cover no-repeat, #f5f5f7;
+  padding: 12px;
+  margin-top: 12px;
+  text-align: center;
+}
