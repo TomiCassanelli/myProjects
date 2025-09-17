@@ -1,11 +1,4 @@
-<header class="header-bar">
-    <div class="container">
-        <strong>CV</strong>
-        <nav class="nav" aria-label="Secciones">
-            <a routerLink="/form">Contacto</a>
-        </nav>
-    </div>
-</header>
+<app-header />
 
 <section class="intro">
     <div class="container">
@@ -51,43 +44,11 @@
         </aside>
     </section>
 
-    <section id="skills" class="card">
+    <app-skills />
 
-        <h2>Habilidades y Aptitudes</h2>
-        <article>
-            <h3>Habilidades</h3>
-            <ul class="tags">
-                <li *ngFor="let hab of habilidades">{{ hab }}</li>
-            </ul>
-        </article>
-        <article>
-            <h3>Aptitudes</h3>
-            <ul class="tags">
-                <li *ngFor="let apt of aptitudes">{{ apt }}</li>
-            </ul>
-        </article>
-    </section>
-
-    <section id="experience" class="card">
-        <h2>Experiencia</h2>
-        <ul>
-            <li *ngFor="let exp of experiencias">
-                <strong>{{ exp.titulo }} ({{ exp.fecha }}):</strong> {{ exp.descripcion }}
-            </li>
-        </ul>
-    </section>
-    <section id="education" class="card">
-        <h2>Educación</h2>
-        <ul>
-            <li *ngFor="let edu of educacion">
-                <strong>{{ edu.titulo }} - ({{ edu.institucion }}):</strong> ({{edu.anioDesde}} - {{edu.anioHasta}}): Promedio
-                {{
-                edu.promedio }}/10
-            </li>
-        </ul>
-    </section>
+    <app-experience />
+    <app-education />
+    
 </main>
 
-<footer class="footer">
-    <div class="container">UCC - Taller de Desarrollo Frontend</div>
-</footer>
+<app-footer />

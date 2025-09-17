@@ -1,0 +1,13 @@
+<section id="education" class="card">
+  <h2>Educación</h2>
+  <ul>
+    @for (edu of educacion; track $index) {
+      <li>
+        <strong>{{ edu.titulo }} - ({{ edu.institucion }}):</strong>
+        ({{ edu.anioDesde }} - {{ edu.anioHasta }})
+        @if (edu.promedio) { - Promedio {{ edu.promedio }}/10 }
+      </li>
+    }
+  </ul>
+</section>
+

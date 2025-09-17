@@ -1,0 +1,21 @@
+<section id="skills" class="card">
+  <h2>Habilidades y Aptitudes</h2>
+  <article>
+    <h3>Habilidades</h3>
+    <ul class="tags">
+      @for (hab of habilidades; track $index) {
+        <li>{{ hab }}</li>
+      }
+    </ul>
+  </article>
+  @if (aptitudes.length > 0) {
+    <article>
+      <h3>Aptitudes</h3>
+      <ul class="tags">
+        @for (apt of aptitudes; track $index) {
+          <li>{{ apt }}</li>
+        }
+      </ul>
+    </article>
+  }
+</section>

@@ -1,11 +1,12 @@
 import { Component, inject } from '@angular/core';
-import { RouterLink } from '@angular/router';
 import { ReactiveFormsModule, FormBuilder, Validators } from '@angular/forms';
+import { Header } from '../shared/header/header';
+import { Footer } from '../shared/footer/footer';
 
 @Component({
   selector: 'app-form',
   standalone: true,
-  imports: [RouterLink, ReactiveFormsModule],
+  imports: [ReactiveFormsModule, Header, Footer],
   templateUrl: './form.html',
   styleUrl: './form.scss',
 })
