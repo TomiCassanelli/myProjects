@@ -1,9 +1,10 @@
 import { Routes } from '@angular/router';
 import { Form } from './form/form';
 import { Curriculum } from './curriculum/curriculum';
-import { AuthGuard } from './auth-guard';
+import { AuthGuard } from './misc/auth-guard';
 import { LoginComponent } from './login/login';
 import { PrivadoComponent } from './private/private';
+import { ServiceHttpComponent } from './service-http/service-http-component';
 
 export const routes: Routes = [
   {
@@ -19,8 +20,13 @@ export const routes: Routes = [
     path: 'form',
     component: Form,
   },
-  { path: 'login', component: LoginComponent},
+  { path: 'login', component: LoginComponent },
   { path: 'privado', component: PrivadoComponent, canActivate: [AuthGuard] },
+  {
+    path: 'service-http-component',
+    component: ServiceHttpComponent,
+    // canActivate: [AuthGuard],
+  },
   {
     path: '**',
     redirectTo: 'curriculum',
