@@ -1,14 +1,12 @@
-/* ===== Página: header | contenido | footer (sin scroll lateral) ===== */
 :host {
   display: grid;
   grid-template-rows: auto 1fr auto;
-  min-block-size: 100dvh; /* 100% alto viewport (estable en mobile) */
+  min-block-size: 100dvh; 
   inline-size: 100%;
   background: #ffffff;
-  overflow-x: clip; /* mata cualquier overflow horizontal */
+  overflow-x: clip; 
 }
 
-/* Asegura que header y footer no provoquen desbordes */
 :host > app-header,
 .page-footer {
   min-inline-size: 0;
@@ -16,9 +14,7 @@
 
 /* Contenido */
 .container {
-  //   grid-row: 2;
   inline-size: 95%;
-  //   min-inline-size: 0;
   margin-inline: auto;
   display: flex;
   flex-direction: column;
@@ -33,17 +29,14 @@
   text-align: center;
 }
 
-/* ===== Grilla centrada y sin desbordes =====
-   - El ancho total de la grilla se limita para que gap+padding nunca “rompan”
-   - Las columnas nunca son más anchas que el contenedor (min(100%, ...))
-*/
+/* Grilla */
 .items-container {
   display: grid;
   gap: clamp(0.75rem, 2.5vw, 1.25rem);
   grid-template-columns: repeat(auto-fit, minmax(min(100%, 26rem), 1fr));
 }
 
-/* Footer (paginación global) */
+/* Footer */
 .page-footer {
   display: flex;
   justify-content: center;

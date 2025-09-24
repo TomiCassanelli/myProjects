@@ -10,6 +10,5 @@ import { Header } from '../shared/header/header';
   styleUrl: './service-http-component.scss',
 })
 export class ServiceHttpComponent {
-  //Injecting the ExampleService to fetch data
   exampleService = inject(ExampleService);
 }
