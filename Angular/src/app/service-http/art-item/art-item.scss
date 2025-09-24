@@ -1,57 +1,56 @@
-:host { display: block; height: 100%; }
-
 .card-container {
-  height: 100%;                       /* llena su celda en la grilla */
-  display: flex; flex-direction: column;
-  gap: 14px;
-  padding: 5px;
-  border: 1px solid #e2e8f0;
-  border-radius: 16px;
+  //   block-size: 100%;                         /* llena su celda en la grilla */
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  padding: clamp(0.75rem, 2vw, 1rem);
+  border: 0.0625rem solid #e2e8f0;
+  border-radius: 1rem;
   background: #f6f7fb;
-  overflow: hidden;
-}
-.card-container:hover {
-  transform: translateY(-1px);
-  box-shadow: 0 12px 28px rgba(2,6,23,.10), 0 2px 6px rgba(2,6,23,.04);
-  border-color: #cbd5e1;
+  overflow: hidden; /* evita desbordes */
+  transition: transform 0.12s ease, box-shadow 0.18s ease, border-color 0.18s ease;
 }
 
+/* Título de la card */
 .title {
-  font-size: clamp(18px, 1.8vw, 20px);
-  font-weight: 800; line-height: 1.2; color: #0f172a;
-  margin: 2px 2px 0; word-break: break-word;
-}
-
-.card-body { 
-  flex: 1 1 auto; 
-  color: #334155; 
-  overflow: hidden; /* Prevent overflow from long text */
-}
-.description { 
-  margin: 0; 
-  line-height: 1.55; 
+  font-size: clamp(1.125rem, 1.8vw, 1.25rem);
+  font-weight: 800;
+  line-height: 1.2;
+  color: #0f172a;
+  margin: 0.125rem 0.125rem 0 0.125rem;
   word-break: break-word;
 }
 
+/* Cuerpo: ocupa el espacio disponible */
+.card-body {
+  flex: 1 1 auto;
+  min-block-size: 0; /* permite shrink si hay poco espacio */
+  color: #334155;
+  overflow: hidden; /* controla textos largos */
+}
+
+.description {
+  margin: 0;
+  line-height: 1.55;
+  word-break: break-word;
+  overflow-wrap: break-word;
+}
+
+/* Botón opcional dentro de la card (toggle, etc.) */
 .toggle-button {
   appearance: none;
-  border: 1px solid #d1d5db;
+  border: 0.0625rem solid #d1d5db;
   background: #ffffff;
   color: #0f172a;
-  padding: 8px 12px;
-  border-radius: 8px;
+  padding-block: 0.5rem;
+  padding-inline: 0.75rem;
+  border-radius: 0.5rem;
   font-weight: 600;
   cursor: pointer;
-  margin-top: 8px;
+  //   margin-block-start: 0.5rem;
 }
+
 .toggle-button:hover {
   background: #f8fafc;
   border-color: #cbd5e1;
-}
-
-.card-footer {
-  margin-top: auto;
-  display: flex; justify-content: center; align-items: center;
-  gap: 10px; padding-top: 10px;
-  border-top: 1px dashed #e5e7eb;
 }
