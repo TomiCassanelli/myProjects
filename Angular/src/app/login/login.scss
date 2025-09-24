@@ -1,0 +1,71 @@
+/* Estructura: header arriba, contenido centrado debajo */
+:host {
+  display: flex;
+  flex-direction: column;
+  min-block-size: 100dvh; /* alto 100% del viewport, estable en mobile */
+  //   inline-size: 100%;
+  background: #f7f8fa;
+  overflow-x: hidden; /* evita scroll lateral del componente */
+}
+
+/* Contenido centrado */
+.wrap {
+  flex: 1 1 auto;
+  display: grid;
+  place-items: center;
+}
+
+/* Tarjeta fluida (ancho máximo suavemente limitado) */
+.card {
+  inline-size: clamp(15rem, 80vw, 46rem);
+  background: #fff;
+  border: 1px solid #e5e7eb; /* 1px en rem */
+  border-radius: 1rem;
+  padding: 1rem;
+  text-align: center;
+}
+
+/* Tipografía fluida */
+h2 {
+  margin: 0 0 0.5rem 0;
+  font-size: clamp(1.25rem, 3vw, 1.75rem);
+  font-weight: 700;
+  color: #111827;
+}
+
+p {
+  margin: 0 0 1rem 0;
+  color: #374151;
+  font-size: clamp(0.95rem, 2.4vw, 1rem);
+  line-height: 1.6;
+}
+
+/* Botón primario: full-width en mobile, auto en pantallas medias+ */
+.btn {
+  appearance: none;
+  border: 0.0625rem solid transparent;
+  border-radius: 0.625rem;
+  padding-block: 0.75rem;
+  padding-inline: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  inline-size: 100%;
+  line-height: 1.2;
+  transition: filter 0.15s ease;
+}
+
+.btn-primary {
+  background: #111827;
+  border-color: #111827;
+  color: #fff;
+}
+.btn-primary:hover {
+  filter: brightness(0.95);
+}
+.btn-primary:active {
+  filter: brightness(0.9);
+}
+.btn:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}

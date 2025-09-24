@@ -1,0 +1,64 @@
+:host {
+  display: grid;
+  grid-template-rows: auto 1fr; 
+  min-height: 100dvh;
+}
+
+/* Contenido centrado */
+.wrap {
+  width: 100%;
+  display: grid;
+  place-items: center;
+  padding: 24px 16px;
+}
+
+/* Tarjeta simple */
+.card {
+  width: min(480px, 100%);
+  background: #f7f8fa;
+  border: 1px solid #e5e7eb;
+  border-radius: 12px;
+  padding: 20px;
+  box-shadow: 0 2px 10px rgba(17, 24, 39, 0.06);
+  text-align: center;
+}
+
+h2 {
+  margin: 0 0 8px;
+  font-size: 24px;
+  font-weight: 700;
+  color: #111827;
+}
+
+p {
+  margin: 0 0 16px;
+  color: #374151;
+}
+
+/* Botones */
+.btn {
+  appearance: none;
+  border: 1px solid transparent;
+  border-radius: 10px;
+  padding: 10px 16px;
+  font-weight: 600;
+  cursor: pointer;
+  width: 100%;
+}
+
+.btn-danger {
+  background: #ef4444;
+  border-color: #ef4444;
+  color: #fff;
+}
+.btn-danger:hover { filter: brightness(0.95); }
+.btn-danger:active { filter: brightness(0.9); }
+
+/* Modo oscuro opcional */
+@media (prefers-color-scheme: dark) {
+  :host { background: #0b1020; }
+  .card { background: #0f172a; border-color: #1f2a3a; box-shadow: none; }
+  h2 { color: #e5e7eb; }
+  p  { color: #cbd5e1; }
+  .btn-danger { background: #dc2626; border-color: #dc2626; }
+}

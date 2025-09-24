@@ -1,4 +1,17 @@
 <div class="card-container">
-    <div class="title">{{inputValue()?.id + ' - ' + inputValue()?.title}}</div>
-    <div class="description" [innerHTML]="getDescription()"></div>
+  <h2 class="title">{{ inputValue()?.title }}</h2>
+  <div class="card-body">
+    <p class="description">
+      @if (isDescriptionLong() && !isExpanded) {
+        {{ getShortDescription() }} Origin: {{ inputValue()?.place_of_origin || 'Unknown' }}
+        <button class="toggle-button" (click)="toggleDescription()">Ver más</button>
+      } @else {
+        {{ getDescription() }}
+        @if (isDescriptionLong()) {
+          <button class="toggle-button" (click)="toggleDescription()">Ver menos</button>
+        }
+      }
+    </p>
+  </div>
+  <div class="card-footer"></div>
 </div>
