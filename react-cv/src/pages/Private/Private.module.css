@@ -1,0 +1,118 @@
+/* ===== Layout base (centrado, responsive) ===== */
+.wrap {
+  height: calc(100vh - 56px);
+  display: grid;
+  place-items: center;
+  padding: 0 16px;
+  overflow: hidden;
+  background: #f9fafb;
+}
+
+.shell {
+  width: min(1100px, 100%);
+  height: 100%;
+  display: grid;
+  grid-template-rows: 1fr 1fr;
+  gap: 20px;
+  overflow: hidden;
+}
+
+.panel {
+  border: 1px solid #e5e7eb;
+  border-radius: 12px;
+  background: #fff;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+  min-height: 0;
+  overflow: hidden;
+}
+
+/* ===== HERO: aviso + video ===== */
+.hero {
+  padding: 16px;
+  height: 100%;
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: 16px;
+  align-items: center;
+}
+
+.notice {
+  padding: 24px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  text-align: center;
+  background: #fff;
+  min-width: 260px;
+  display: grid;
+  gap: 12px;
+  justify-items: center;
+}
+
+.btn {
+  padding: 12px 24px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  color: #fff;
+}
+.btnDanger {
+  background: #b91c1c;
+}
+.btnPrimary {
+  background: #111827;
+}
+
+.videoWrap {
+  display: grid;
+  place-items: center;
+}
+.videoFrame {
+  width: clamp(280px, 38vw, 560px);
+  max-width: 100%;
+  aspect-ratio: 16 / 9;
+  border-radius: 12px;
+  overflow: hidden;
+  border: 1px solid #e5e7eb;
+  background: #000;
+}
+.video {
+  width: 100%;
+  height: 100%;
+  border: 0;
+}
+
+/* ===== TASKS: izquierda input/nota – derecha tareas ===== */
+.tasksRow {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+  min-height: 0;
+}
+.cell {
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  min-height: 0;
+  overflow: auto;
+}
+
+/* ===== Responsive ===== */
+@media (max-width: 900px) {
+  .shell {
+    grid-template-rows: auto 1fr;
+  }
+  .hero {
+    grid-template-columns: 1fr;
+  }
+  .tasksRow {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Safe box-sizing */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}

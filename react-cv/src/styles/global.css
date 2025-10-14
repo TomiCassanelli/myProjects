@@ -1,0 +1,86 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap");
+
+:root {
+  --muted: #6b7280;
+  --border: #e5e7eb;
+  --bg: #ffffff;
+}
+
+html,
+body,
+#root {
+  height: 100%;
+}
+html,
+body {
+  font-family: "Roboto", Arial, Helvetica, sans-serif;
+  margin: 0;
+  color: #111827;
+  background: #fff;
+}
+
+.container {
+  max-width: 980px;
+  margin: 0 auto;
+  padding: 0 12px;
+}
+.muted {
+  color: var(--muted);
+}
+
+.card {
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 16px;
+  background: var(--bg);
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.04);
+}
+
+.btn {
+  padding: 10px 14px;
+  border: 1px solid #11182720;
+  border-radius: 10px;
+  background: #111827;
+  color: #fff;
+  cursor: pointer;
+  transition: filter 0.15s;
+}
+.btn:hover {
+  filter: brightness(0.95);
+}
+.btn:active {
+  filter: brightness(0.9);
+}
+.btn:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.intro {
+  padding: 24px 0;
+  border-bottom: 1px solid var(--border);
+  background: #fafafa;
+}
+.avatar {
+  width: 128px;
+  height: 128px;
+  border-radius: 50%;
+  border: 3px solid #e5e7eb;
+  object-fit: cover;
+}
+
+footer.footer {
+  background: url("/fondo.png") center/cover no-repeat, #f5f5f7;
+  padding: 12px;
+  margin-top: 12px;
+  text-align: center;
+}
+
+a {
+  color: #111827;
+  text-decoration: none;
+}
+a:focus-visible {
+  outline: 2px solid #111827;
+  outline-offset: 2px;
+}
